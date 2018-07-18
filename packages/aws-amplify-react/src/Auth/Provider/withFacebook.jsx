@@ -51,6 +51,7 @@ export default function withFacebook(Comp) {
             const fb = window.FB;
             fb.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, response => {
                 debugger;
+                console.log("in facebook get");
                 let user = {
                     name: response.name
                 }
